@@ -1,0 +1,61 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Comprar frutas no mercado",
+      "isCompleted": true,
+      "categoryId": "1"
+    },
+    {
+      "id": "2",
+      "title": "Ir para academia",
+      "isCompleted": true,
+      "categoryId": "5"
+    },
+    {
+      "id": "3",
+      "title": "Entrar na daily",
+      "isCompleted": false,
+      "categoryId": "3"
+    },
+    {
+      "id": "4",
+      "title": "Estudar 1 cap curso angular",
+      "isCompleted": false,
+      "categoryId": "2"
+    },
+    {
+      "id": "5",
+      "title": "Passear com o dog",
+      "isCompleted": false,
+      "categoryId": "4"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Casa",
+      "color": "#27AE60"
+    },
+    {
+      "id": "2",
+      "name": "Estudo",
+      "color": "#F2994A"
+    },
+    {
+      "id": "3",
+      "name": "Trabalho",
+      "color": "#2F80ED"
+    },
+    {
+      "id": "4",
+      "name": "Pessoal",
+      "color": "#EB5757"
+    },
+    {
+      "id": "5",
+      "name": "Saúde",
+      "color": "#9B51E0"
+    }
+  ]
+}
