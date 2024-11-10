@@ -21,3 +21,27 @@ export const task: Task = {
   isCompleted: false,
   categoryId: '5',
 };
+
+export const TASK_INTERNAL_SERVER_ERROR_RESPONSE: {
+  status: number;
+  statusText: string;
+} = {
+  status: 500,
+  statusText: 'Internal Server Error',
+};
+
+export const TASK_UNPROCESSIBLE_ENTITY_RESPONSE: {
+  status: number;
+  statusText: string;
+} = {
+  status: 422,
+  statusText: 'Unprocessable Entity',
+};
+
+export const TASK_NOT_FOUND_RESPONSE: {
+  status: number;
+  statusText: string;
+} = {
+  status: 404,
+  statusText: 'Not found',
+};
