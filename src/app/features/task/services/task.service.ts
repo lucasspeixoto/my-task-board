@@ -16,6 +16,8 @@ export class TaskService {
 
   public readonly _apiUrl = environment.apiUrl;
 
+  public isLoadingTask = signal(false);
+
   public getTasks(): Observable<Task[]> {
     return this._httpClient.get<Task[]>(`${this._apiUrl}/tasks`).pipe(
       tap(tasks => {
