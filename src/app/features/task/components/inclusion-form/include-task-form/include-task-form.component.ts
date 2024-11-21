@@ -45,7 +45,7 @@ const COMMONS = [NgClass];
       class="flex flex-row gap-2 select-none"
       [formGroup]="newTaskForm">
       <mat-form-field class="w-full">
-        <mat-label>Tarefa</mat-label>
+        <mat-label for="title" data-testid="titleLabel">Tarefa</mat-label>
         <input
           formControlName="title"
           matInput
@@ -54,8 +54,11 @@ const COMMONS = [NgClass];
         <mat-hint class="text-tertiary">Aperte enter para adicionar</mat-hint>
       </mat-form-field>
       <mat-form-field>
-        <mat-label>Categoria</mat-label>
+        <mat-label for="categoryId" data-testid="categoryIdLabel"
+          >Categoria</mat-label
+        >
         <mat-select
+          data-testid="matSelect"
           formControlName="categoryId"
           (selectionChange)="selectionChangeHandler($event)"
           (keyup.enter)="onEnterToAddATask()">
@@ -76,13 +79,13 @@ export class IncludeTaskFormComponent {
 
   private readonly taskService = inject(TaskService);
 
+  private readonly snackBarService = inject(SnackBarService);
+
   public readonly categories = this.categoryService.categories;
 
   public readonly newTaskForm = createTaskForm();
 
   private readonly destroy$ = inject(DestroyRef);
-
-  private readonly snackBarService = inject(SnackBarService);
 
   public isIncludeTaskFormDisabled = computed(() => {
     if (this.taskService.isLoadingTask()) {
@@ -98,7 +101,6 @@ export class IncludeTaskFormComponent {
 
   public selectionChangeHandler(event: MatSelectChange): void {
     const categoryId = event.value;
-
     this.categoryService.selectedCategoryId.set(categoryId);
   }
 
