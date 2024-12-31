@@ -8,10 +8,9 @@ const COMPONENTS = [CategoryComponent, TaskComponent];
 const MODULES = [MatDividerModule];
 
 @Component({
-  selector: 'app-main',
-  standalone: true,
-  imports: [...COMPONENTS, ...MODULES],
-  template: `
+    selector: 'app-main',
+    imports: [...COMPONENTS, ...MODULES],
+    template: `
     <div class="h-screen flex w-full">
       <!-- Categorias -->
       <app-category class="w-1/4" />
@@ -23,7 +22,7 @@ const MODULES = [MatDividerModule];
       <app-task class="w-3/4 pt-10" />
     </div>
   `,
-  styles: ``,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    styles: ``,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MainComponent {}

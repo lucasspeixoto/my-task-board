@@ -9,10 +9,9 @@ const COMPONENTS = [MainListComponent, ColorsListComponent];
 const PIPES = [AsyncPipe];
 
 @Component({
-  selector: 'app-category',
-  standalone: true,
-  imports: [...COMPONENTS, ...PIPES],
-  template: `
+    selector: 'app-category',
+    imports: [...COMPONENTS, ...PIPES],
+    template: `
     <div class="flex flex-col justify-between h-full w-full">
       <!-- main-list -->
       <app-main-list />
@@ -21,7 +20,7 @@ const PIPES = [AsyncPipe];
       <app-colors-list />
     </div>
   `,
-  styles: ``,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    styles: ``,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CategoryComponent {}
