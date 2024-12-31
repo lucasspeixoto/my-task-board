@@ -18,8 +18,8 @@ O projeto foi desenvolvido com as seguintes tecnologias:
 - [Material Design](https://material.angular.io/)
 
 ## 📑 Simulação do app
-![Login](public/app_demo.gif 'Demo')
 
+![Login](public/app_demo.gif 'Demo')
 
 ## 🚀 Instalação
 
