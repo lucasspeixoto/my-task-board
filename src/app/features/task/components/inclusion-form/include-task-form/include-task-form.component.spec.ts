@@ -3,14 +3,11 @@ import {
   fakeAsync,
   TestBed,
   tick,
-  waitForAsync,
 } from '@angular/core/testing';
 import { IncludeTaskFormComponent } from './include-task-form.component';
 import { SnackBarService } from '../../../../../shared/services/snack-bar.service';
-import { CategoryService } from '../../../../category/services/category.service';
 import { TaskService } from '../../../services/task.service';
-import { Observable, of } from 'rxjs';
-import { Task } from '../../../model/task.model';
+import { of } from 'rxjs';
 import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { provideAnimations } from '@angular/platform-browser/animations';
@@ -20,7 +17,6 @@ import { By } from '@angular/platform-browser';
 describe('IncludeTaskFormComponent', () => {
   let component: IncludeTaskFormComponent;
   let fixture: ComponentFixture<IncludeTaskFormComponent>;
-  let categoryService: CategoryService;
   let taskService: TaskService;
   let snackBarService: SnackBarService;
 
@@ -38,7 +34,6 @@ describe('IncludeTaskFormComponent', () => {
 
     fixture = TestBed.createComponent(IncludeTaskFormComponent);
 
-    categoryService = TestBed.inject(CategoryService);
     taskService = TestBed.inject(TaskService);
     snackBarService = TestBed.inject(SnackBarService);
 
