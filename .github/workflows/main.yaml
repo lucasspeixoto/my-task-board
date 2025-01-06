@@ -6,7 +6,7 @@ on:
 
 jobs:
   CI:
-    name: Continous Integraiton
+    name: Continous Integration
     runs-on: ubuntu-latest
     steps:
       - name: 📑 Checkout Code
