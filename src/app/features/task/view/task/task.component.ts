@@ -1,7 +1,8 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { InclusionFormComponent } from '../../components/inclusion-form/inclusion-form.component';
+import { TaskListComponent } from '../../components/task-list/task-list.component';
 
-const COMPONENTS = [InclusionFormComponent];
+const COMPONENTS = [InclusionFormComponent, TaskListComponent];
 
 @Component({
   selector: 'app-task',
@@ -15,6 +16,7 @@ const COMPONENTS = [InclusionFormComponent];
       <app-inclusion-form />
 
       <!-- Lista de tarefas -->
+      <app-task-list />
     </div>
   `,
   styles: ``,
