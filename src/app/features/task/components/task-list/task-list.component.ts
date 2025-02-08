@@ -11,18 +11,18 @@ import { NoTasksComponent } from '../no-tasks/no-tasks.component';
       @if (tasks$ | async) {
         @if (numberOfTasks() > 0) {
           @for (task of tasks(); track task.id) {
-            <div class="flex flex-row justify-start mb-2 items-center gap-4">
+            <div class="flex flex-row justify-start mb-b items-center gap-4">
               <span>{{ task.title }}</span>
-              <!-- <app-task-item /> -->
+              <!-- <app-update-task /> -->
 
-              <!-- <app-task-delete /> -->
+              <!-- <app-delete-task /> -->
             </div>
           }
         } @else {
           <app-no-tasks
-            message="Nenhuma tarefa adicionada 😔"
+            alt="Nenhuma tarefa adicionad"
             imageUrl="no_data.svg"
-            alt="Sem tarefas adicionadas" />
+            message="Nenhuma tarefa adicionada 😔" />
         }
       }
     </div>
@@ -30,11 +30,11 @@ import { NoTasksComponent } from '../no-tasks/no-tasks.component';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TaskListComponent {
-  private taskService = inject(TaskService);
+  private tasksService = inject(TaskService);
 
-  public tasks$ = this.taskService.getTasks();
+  public tasks$ = this.tasksService.getTasks();
 
-  public tasks = this.taskService.tasks;
+  public tasks = this.tasksService.tasks;
 
-  public numberOfTasks = this.taskService.numberOfTasks;
+  public numberOfTasks = this.tasksService.numberOfTasks;
 }
